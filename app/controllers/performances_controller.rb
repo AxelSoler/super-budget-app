@@ -1,5 +1,5 @@
 class PerformancesController < ApplicationController
-  before_action :set_performance, only: %i[ show edit update destroy ]
+  before_action :set_performance, only: %i[show edit update destroy]
 
   # GET /performances or /performances.json
   def index
@@ -7,8 +7,7 @@ class PerformancesController < ApplicationController
   end
 
   # GET /performances/1 or /performances/1.json
-  def show
-  end
+  def show; end
 
   # GET /performances/new
   def new
@@ -16,8 +15,7 @@ class PerformancesController < ApplicationController
   end
 
   # GET /performances/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /performances or /performances.json
   def create
@@ -25,7 +23,7 @@ class PerformancesController < ApplicationController
 
     respond_to do |format|
       if @performance.save
-        format.html { redirect_to performance_url(@performance), notice: "Performance was successfully created." }
+        format.html { redirect_to performance_url(@performance), notice: 'Performance was successfully created.' }
         format.json { render :show, status: :created, location: @performance }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class PerformancesController < ApplicationController
   def update
     respond_to do |format|
       if @performance.update(performance_params)
-        format.html { redirect_to performance_url(@performance), notice: "Performance was successfully updated." }
+        format.html { redirect_to performance_url(@performance), notice: 'Performance was successfully updated.' }
         format.json { render :show, status: :ok, location: @performance }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +50,20 @@ class PerformancesController < ApplicationController
     @performance.destroy
 
     respond_to do |format|
-      format.html { redirect_to performances_url, notice: "Performance was successfully destroyed." }
+      format.html { redirect_to performances_url, notice: 'Performance was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_performance
-      @performance = Performance.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def performance_params
-      params.require(:performance).permit(:name, :amount, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_performance
+    @performance = Performance.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def performance_params
+    params.require(:performance).permit(:name, :amount, :user_id)
+  end
 end
