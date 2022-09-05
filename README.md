@@ -27,7 +27,7 @@ To get a local copy up and running follow these simple steps:
 - Type these commands into the terminal:
 
 ```
-git clone 
+git clone https://github.com/AxelSoler/super-budget-app.git
 cd super-budget-app
 bundle install
 ```
