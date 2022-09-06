@@ -3,7 +3,8 @@ class PerformancesController < ApplicationController
 
   # GET /performances or /performances.json
   def index
-    @performances = Performance.all
+    @group = Group.find(params[:group_id])
+    @performances = Performance.all.order(created_at: :desc)
   end
 
   # GET /performances/1 or /performances/1.json
@@ -19,11 +20,12 @@ class PerformancesController < ApplicationController
 
   # POST /performances or /performances.json
   def create
-    @performance = Performance.new(performance_params)
+    @performance = Performance.new(user_id: current_user.id, name: performance_params[:name],
+                                   amount: performance_params[:amount])
 
     respond_to do |format|
       if @performance.save
-        format.html { redirect_to performance_url(@performance), notice: 'Performance was successfully created.' }
+        format.html { redirect_to group_performances_path, notice: 'Performance was successfully created.' }
         format.json { render :show, status: :created, location: @performance }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -36,7 +38,7 @@ class PerformancesController < ApplicationController
   def update
     respond_to do |format|
       if @performance.update(performance_params)
-        format.html { redirect_to performance_url(@performance), notice: 'Performance was successfully updated.' }
+        format.html { redirect_to group_performances_path, notice: 'Performance was successfully updated.' }
         format.json { render :show, status: :ok, location: @performance }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -50,7 +52,7 @@ class PerformancesController < ApplicationController
     @performance.destroy
 
     respond_to do |format|
-      format.html { redirect_to performances_url, notice: 'Performance was successfully destroyed.' }
+      format.html { redirect_to group_performances_path, notice: 'Performance was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,6 +66,6 @@ class PerformancesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def performance_params
-    params.require(:performance).permit(:name, :amount, :user_id)
+    params.require(:performance).permit(:name, :amount)
   end
 end

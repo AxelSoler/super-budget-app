@@ -1,4 +1,4 @@
-<%= form_with(model: performance) do |form| %>
+<%= form_with(model: performance, url: group_performances_path) do |form| %>
   <% if performance.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(performance.errors.count, "error") %> prohibited this performance from being saved:</h2>
@@ -22,11 +22,6 @@
   </div>
 
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit "save" %>
   </div>
 <% end %>

@@ -1,14 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Performances</h1>
+<div>
+  <%= link_to groups_path do %>
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <% end %>
+</div>
+
+<h1><%= @group.name %> performance</h1>
+
+<h2>Total amount: $0</h2>
 
 <div id="performances">
   <% @performances.each do |performance| %>
     <%= render performance %>
-    <p>
-      <%= link_to "Show this performance", performance %>
-    </p>
   <% end %>
 </div>
 
-<%= link_to "New performance", new_group_performance_path %>
+<%= link_to new_group_performance_path do %>
+  <button>add a new transaction</button>
+<% end %>

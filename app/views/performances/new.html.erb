@@ -1,9 +1,15 @@
-<h1>New performance</h1>
+<div>
+  <%= link_to group_performances_path do %>
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <% end %>
+</div>
+
+<h1>New Item</h1>
 
 <%= render "form", performance: @performance %>
 
 <br>
 
 <div>
-  <%= link_to "Back to performances", performances_path %>
+  <%= link_to "Back to performances", group_performances_path %>
 </div>
