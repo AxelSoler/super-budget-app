@@ -3,7 +3,7 @@
 <h1>Your budget</h1>
 
 <div id="groups">
-  <% @groups.each do |group| %>
+  <% @groups.includes([:performance]).each do |group| %>
     <%= render group %>
     <p>
       <%= link_to "Show all elements from this group", group_performances_path(group.id) %>

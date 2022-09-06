@@ -13,7 +13,7 @@ class PerformancesController < ApplicationController
   # GET /performances/new
   def new
     @group = Group.find(params[:group_id])
-    @groups = Group.all
+    @groups = Group.where(user_id: current_user.id)
     @performance = Performance.new
   end
 

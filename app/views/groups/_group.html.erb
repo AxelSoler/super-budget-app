@@ -10,7 +10,7 @@
   </p>
 
   <p>
-    <strong>Total: $0</strong>
+    <strong>Total: $<%= group.performance.sum{ |performance| performance.amount } %></strong>
   </p>
 
 </div>

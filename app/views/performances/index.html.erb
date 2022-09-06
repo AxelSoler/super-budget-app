@@ -8,7 +8,7 @@
 
 <h1><%= @group.name %> performance</h1>
 
-<h2>Total amount: $0</h2>
+<h2>Total amount: $<%= @performances.sum{ |performance| performance.amount } %></h2>
 
 <div id="performances">
   <% @performances.each do |performance| %>
