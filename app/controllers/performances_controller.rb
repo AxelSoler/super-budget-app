@@ -4,7 +4,7 @@ class PerformancesController < ApplicationController
   # GET /performances or /performances.json
   def index
     @group = Group.find(params[:group_id])
-    @performances = Performance.all.order(created_at: :desc)
+    @performances = @group.performance.all.order(created_at: :desc)
   end
 
   # GET /performances/1 or /performances/1.json
@@ -12,6 +12,8 @@ class PerformancesController < ApplicationController
 
   # GET /performances/new
   def new
+    @group = Group.find(params[:group_id])
+    @groups = Group.all
     @performance = Performance.new
   end
 
@@ -20,8 +22,18 @@ class PerformancesController < ApplicationController
 
   # POST /performances or /performances.json
   def create
-    @performance = Performance.new(user_id: current_user.id, name: performance_params[:name],
-                                   amount: performance_params[:amount])
+    @group = Group.find(params[:group_id])
+    @performance = @group.performance.new(user_id: current_user.id, name: performance_params[:name],
+                                          amount: performance_params[:amount])
+    if params[:budget_ids]
+      params[:budget_ids].each do |group_id|
+        group = Group.find(group_id)
+        group.performance << @performance
+      end
+    else
+      redirect_to new_group_performance_path(@group)
+      return
+    end
 
     respond_to do |format|
       if @performance.save

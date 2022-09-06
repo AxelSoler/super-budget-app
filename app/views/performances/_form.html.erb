@@ -13,12 +13,21 @@
 
   <div>
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, required: true %>
   </div>
 
   <div>
     <%= form.label :amount, style: "display: block" %>
-    <%= form.text_field :amount %>
+    <%= form.text_field :amount, required: true %>
+  </div>
+
+  <div class="chose_groups">
+    <%@groups.each do |budget|%>
+      <div class="chose_group">
+        <p><%= budget.name %></p>
+        <%= check_box_tag "budget_ids[]", budget.id, budget.id == @group.id  %>
+      </div>
+    <%end%>
   </div>
 
   <div>
