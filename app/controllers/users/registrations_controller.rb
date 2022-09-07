@@ -51,7 +51,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # The path used after sign up.
   def after_sign_up_path_for(resource)
     if resource.is_a?(User)
-      root_path
+      groups_path
     else
       super
     end

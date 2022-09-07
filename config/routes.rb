@@ -4,11 +4,12 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   
-  root "groups#index"
+  root "splashs#index"
 
+  resources :splashs, only: [:index]
   resources :users
-  resources :groups do
-    resources :performances
+  resources :groups, only: [:index, :new, :create] do
+    resources :performances, only: [:index, :new, :create]
   end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

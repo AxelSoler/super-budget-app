@@ -1,4 +1,5 @@
 class PerformancesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_performance, only: %i[show edit update destroy]
 
   # GET /performances or /performances.json
