@@ -1,16 +1,14 @@
 <div id="<%= dom_id group %>">
   <p>
-    <strong>Name:</strong>
+    <%= image_tag group.icon, style: 'height:24px;' %>
+  </p>
+
+  <p>
     <%= group.name %>
   </p>
 
   <p>
-    <strong>Icon:</strong>
-    <%= group.icon %>
-  </p>
-
-  <p>
-    <strong>Total: $<%= group.performance.sum{ |performance| performance.amount } %></strong>
+    <strong>$<%= group.performance.sum{ |performance| performance.amount } %></strong>
   </p>
 
 </div>

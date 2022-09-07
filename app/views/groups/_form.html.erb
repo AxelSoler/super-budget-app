@@ -18,7 +18,8 @@
 
   <div>
     <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon, required: true %>
+    <p>If you want you can select an icon from <%= link_to "Flaticon", "https://www.flaticon.com/", :target => "_blank" %></p>
+    <%= form.text_field :icon, required: true, placeholder: "Paste the link to the image here" %>
   </div>
 
   <div>
