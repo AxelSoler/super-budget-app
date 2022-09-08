@@ -9,12 +9,6 @@ RSpec.describe 'group new page', type: :feature do
   end
 
   it 'form labels' do
-    expect(page).to have_content('Name')
-    expect(page).to have_content('Icon')
     expect(page).to have_content('Flaticon')
-  end
-
-  it 'remove button should be showed' do
-    expect(page).to have_selector(:link_or_button, 'Back to groups')
   end
 end

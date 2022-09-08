@@ -37,7 +37,7 @@ RSpec.describe 'Groups', type: :request do
       expect(response).to render_template('new')
     end
     it 'body includes correct placeholder text' do
-      assert_select 'h1', 'New group'
+      assert_select 'h2', 'NEW GROUP'
     end
   end
 end

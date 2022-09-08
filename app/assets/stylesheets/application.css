@@ -80,7 +80,7 @@ body {
   background-color: var(--main);
   color: rgb(237, 237, 237);
   height: 64px;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
 
 i {
@@ -196,4 +196,29 @@ h2 {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.Flaticon {
+  margin-left: 12px;
+}
+
+.Flaticon a {
+  color: var(--second);
+  font-family: "Proxima Nova Light", sans-serif;
+}
+
+.save_div {
+  width: 100%;
+  display: flex;
+}
+
+.save_button {
+  width: 200px;
+  height: 36px;
+  margin: 24px auto;
+  background-color: var(--main);
+  color: rgb(237, 237, 237);
+  border-radius: 5px;
+  font-family: "Proxima Nova Bold", sans-serif;
+  font-size: 18px;
 }

@@ -12,17 +12,15 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name, required: true %>
+    <%= form.text_field :name, required: true, placeholder: "Name", class:"session_input" %>
   </div>
 
   <div>
-    <%= form.label :icon, style: "display: block" %>
-    <p>If you want you can select an icon from <%= link_to "Flaticon", "https://www.flaticon.com/", :target => "_blank" %></p>
-    <%= form.text_field :icon, required: true, placeholder: "Paste the link to the image here" %>
+    <%= form.text_field :icon, required: true, placeholder: "Paste the link to the image here", class:"session_input" %>
+    <p class="Flaticon">If you want, you can select an icon from <%= link_to "Flaticon", "https://www.flaticon.com/", :target => "_blank" %></p>
   </div>
 
-  <div>
-    <%= form.submit "save" %>
+  <div class="save_div">
+    <%= form.submit "SAVE", class:"save_button" %>
   </div>
 <% end %>
