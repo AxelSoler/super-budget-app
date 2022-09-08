@@ -13,7 +13,7 @@ RSpec.describe 'Splash', type: :request do
     end
 
     it 'should display correct placeholder' do
-      expect(response.body).to include('SUPER MEGA BUDGET APP')
+      expect(response.body).to include('SUPER BUDGET APP')
     end
   end
 end
