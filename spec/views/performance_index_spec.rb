@@ -25,7 +25,7 @@ RSpec.describe 'Performance index page', type: :feature do
 
   context 'When on Performance index page' do
     it 'All Performances info should be showed' do
-      expect(page).to have_content("group3's transactions")
+      expect(page).to have_content("DETAILS")
       expect(page).to have_content('Total amount: $15502.59')
     end
 
@@ -34,8 +34,8 @@ RSpec.describe 'Performance index page', type: :feature do
     end
 
     it 'Should have 2 items' do
-      expect(page).to have_content('Name: performance5')
-      expect(page).to have_content('Name: performance6')
+      expect(page).to have_content('performance5')
+      expect(page).to have_content('performance6')
       expect(page).to have_content('Amount: $13.0')
       expect(page).to have_content('Amount: $15489.59')
     end

@@ -21,7 +21,7 @@ RSpec.describe 'Perfromance', type: :request do
       expect(response).to render_template('index')
     end
     it 'body includes correct placeholder text' do
-      assert_select 'h1', "group1's transactions"
+      assert_select 'h2', "DETAILS"
     end
   end
 
