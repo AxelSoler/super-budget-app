@@ -1,9 +1,9 @@
-<h1>SUPER MEGA BUDGET APP</h1>
+<div class="splash_page">
+  <h1 class="app_name">SUPER BUDGET APP</h1>
 
-<%= link_to user_session_path do %>
-  <button>LOG IN</button>
-<% end %>
+  <div class="main_sign_in">
+    <%= button_to "LOG IN", user_session_path, method: :get, form_class: 'form_log_in', class: 'main_log_in' %>
 
-<%= link_to new_user_registration_path do %>
-  <button>SIGN UP</button>
-<% end %>
+    <%= button_to "SIGN UP", new_user_registration_path, method: :get, form_class: 'form_log_in', class: 'main_sign_up' %>
+  </div>
+</div>
