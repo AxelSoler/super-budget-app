@@ -2,7 +2,7 @@
 
 # Super Budget App
 
-> Description the project.
+> Super Budget App is an application where you can track all the transactions you have done, You must create an account in order to use the app
 
 ## Built With
 
@@ -73,7 +73,7 @@ rails server
 rspec
 ```
 
-## Authors
+## Author
 
 👤 **Axel Soler**
 
