@@ -24,19 +24,17 @@ RSpec.describe 'Performance new page', type: :feature do
   end
 
   context 'When on performance new page' do
-    it 'title and link' do
-      expect(page).to have_content('New Item')
-      expect(page).to have_selector(:link_or_button, 'Back to performances')
+    it 'title and sign out link' do
+      expect(page).to have_content('NEW ITEM')
+      expect(page).to have_selector(:link_or_button, 'Sign out')
     end
 
     it 'form content' do
-      expect(page).to have_content('Name')
-      expect(page).to have_content('Amount')
       expect(page).to have_content('group1')
       expect(page).to have_content('group2')
       expect(page).to have_content('group3')
       expect(page).to have_content('group4')
-      expect(page).to have_selector(:link_or_button, 'save')
+      expect(page).to have_selector(:link_or_button, 'SAVE')
     end
   end
 end

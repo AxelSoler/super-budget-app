@@ -25,6 +25,7 @@ RSpec.describe 'Groups', type: :feature do
 
   it 'all the content is rendering in the index page' do
     expect(page).to have_content('TRANSACTIONS')
+    expect(page).to have_selector(:link_or_button, 'Sign out')
   end
 
   it 'shoud have 4 groups' do

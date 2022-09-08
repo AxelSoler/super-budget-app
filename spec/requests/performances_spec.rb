@@ -21,7 +21,7 @@ RSpec.describe 'Perfromance', type: :request do
       expect(response).to render_template('index')
     end
     it 'body includes correct placeholder text' do
-      assert_select 'h2', "DETAILS"
+      assert_select 'h2', 'DETAILS'
     end
   end
 
@@ -37,7 +37,7 @@ RSpec.describe 'Perfromance', type: :request do
       expect(response).to render_template('new')
     end
     it 'body includes correct placeholder text' do
-      assert_select 'h1', 'New Item'
+      assert_select 'h2', 'NEW ITEM'
     end
   end
 end

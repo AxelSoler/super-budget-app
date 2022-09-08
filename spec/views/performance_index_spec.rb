@@ -25,12 +25,13 @@ RSpec.describe 'Performance index page', type: :feature do
 
   context 'When on Performance index page' do
     it 'All Performances info should be showed' do
-      expect(page).to have_content("DETAILS")
+      expect(page).to have_content('DETAILS')
       expect(page).to have_content('Total amount: $15502.59')
     end
 
     it 'link new performance' do
       expect(page).to have_selector(:link_or_button, 'add a new transaction')
+      expect(page).to have_selector(:link_or_button, 'Sign out')
     end
 
     it 'Should have 2 items' do

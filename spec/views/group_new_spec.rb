@@ -11,4 +11,7 @@ RSpec.describe 'group new page', type: :feature do
   it 'form labels' do
     expect(page).to have_content('Flaticon')
   end
+  it 'sign out link' do
+    expect(page).to have_selector(:link_or_button, 'Sign out')
+  end
 end

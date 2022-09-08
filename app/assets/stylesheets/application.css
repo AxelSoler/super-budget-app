@@ -251,3 +251,14 @@ h3 {
   flex-direction: column;
   height: 100%;
 }
+
+.chose_groups {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 90%;
+  margin: 0 5%;
+}
+
+.chose_group {
+  margin: auto;
+}
