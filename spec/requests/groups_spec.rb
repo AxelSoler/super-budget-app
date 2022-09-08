@@ -21,7 +21,7 @@ RSpec.describe 'Groups', type: :request do
       expect(response).to render_template('index')
     end
     it 'body includes correct placeholder text' do
-      assert_select 'h1', 'Your budget'
+      assert_select 'h2', 'TRANSACTIONS'
     end
   end
 

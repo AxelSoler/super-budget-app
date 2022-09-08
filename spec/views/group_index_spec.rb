@@ -24,7 +24,7 @@ RSpec.describe 'Groups', type: :feature do
   end
 
   it 'all the content is rendering in the index page' do
-    expect(page).to have_content('Your budge')
+    expect(page).to have_content('TRANSACTIONS')
   end
 
   it 'shoud have 4 groups' do
@@ -42,6 +42,6 @@ RSpec.describe 'Groups', type: :feature do
   end
 
   it 'link new group' do
-    expect(page).to have_selector(:link_or_button, 'New group')
+    expect(page).to have_selector(:link_or_button, 'NEW TRANSACTION GROUP')
   end
 end

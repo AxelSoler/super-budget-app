@@ -119,3 +119,81 @@ h2 {
   color: rgb(147, 147, 147);
   font-family: "Proxima Nova Light", sans-serif;
 }
+
+.group {
+  background-color: #fff;
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.group_grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  align-items: center;
+}
+
+.group_icon {
+  margin-left: 12px;
+}
+
+.group_name {
+  font-size: 28px;
+  font-family: "Proxima Nova Light", sans-serif;
+  color: rgb(147, 147, 147);
+  margin: 0 auto;
+}
+
+.group_amount {
+  margin: 0 12px 0 auto;
+  font-size: 24px;
+}
+
+.group_transactions {
+  width: 200px;
+  height: 36px;
+  background-color: var(--main);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.group_transactions a {
+  text-decoration: none;
+  color: rgb(237, 237, 237);
+  border: none;
+  font-family: "Proxima Nova Light", sans-serif;
+}
+
+.new_group {
+  width: 100%;
+  height: 100px;
+  background-color: var(--second);
+  margin: auto 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new_group a {
+  color: rgb(237, 237, 237);
+  text-decoration: none;
+  width: 90%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid rgb(237, 237, 237);
+  font-family: "Proxima Nova Bold", sans-serif;
+}
+
+.transactions_page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
