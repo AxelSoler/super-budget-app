@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
 RSpec.describe 'Perfromance', type: :request do
   before(:each) do
     @user = User.create!(name: 'Axel', email: 'axel@gmail2.com', password: '123456')
@@ -41,3 +42,4 @@ RSpec.describe 'Perfromance', type: :request do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

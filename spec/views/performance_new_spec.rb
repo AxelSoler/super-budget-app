@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
 RSpec.describe 'Performance new page', type: :feature do
   before do
     @user = User.create!(name: 'Axel', email: 'axel@gmail2.com', password: '123456')
@@ -38,3 +39,4 @@ RSpec.describe 'Performance new page', type: :feature do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

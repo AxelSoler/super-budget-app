@@ -39,10 +39,8 @@ class PerformancesController < ApplicationController
     respond_to do |format|
       if @performance.save
         format.html { redirect_to group_performances_path, notice: 'Performance was successfully created.' }
-        format.json { render :show, status: :created, location: @performance }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @performance.errors, status: :unprocessable_entity }
       end
     end
   end

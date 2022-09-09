@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
 RSpec.describe 'Groups', type: :request do
   before(:each) do
     @user = User.create(name: 'Axel', id: 1, email: 'axel@gmail2.com', password: '123456')
@@ -41,3 +42,4 @@ RSpec.describe 'Groups', type: :request do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

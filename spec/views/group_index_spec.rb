@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
 RSpec.describe 'Groups', type: :feature do
   before do
     @user = User.create!(name: 'Axel', email: 'axel@gmail2.com', password: '123456')
@@ -46,3 +47,4 @@ RSpec.describe 'Groups', type: :feature do
     expect(page).to have_selector(:link_or_button, 'NEW TRANSACTION GROUP')
   end
 end
+# rubocop:enable Metrics/BlockLength
