@@ -1,0 +1,21 @@
+<div class="performances_page">
+  <div class="navbar_login">
+    <div>
+      <%= link_to group_performances_path do %>
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        <% end %>
+    </div>
+    
+    <h2>NEW ITEM</h2>
+
+    <%if user_signed_in?%>
+      <div class="login_actions"><%= button_to "Sign out",
+        destroy_user_session_path,
+        method: :delete,
+        data:{turbo:false},
+        class:"login_button" %>
+      </div>
+    <% end %>
+  </div>
+
+<%= render "form", performance: @performance %>

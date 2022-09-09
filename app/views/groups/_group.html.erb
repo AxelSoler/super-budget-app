@@ -1,0 +1,19 @@
+<div id="<%= dom_id group %>" class="group">
+  <div class="group_grid">
+    <p class="group_icon">
+      <%= image_tag group.icon, style: 'height:36px;' %>
+    </p>
+
+    <p class="group_name">
+      <%= group.name %>
+    </p>
+
+    <p class="group_amount">
+      <strong>$<%= group.performance.sum{ |performance| performance.amount } %></strong>
+    </p>
+  </div>
+
+  <p class="group_transactions">
+    <%= link_to "Show transactions", group_performances_path(group.id) %>
+  </p>
+</div>

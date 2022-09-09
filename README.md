@@ -2,7 +2,11 @@
 
 # Super Budget App
 
-> Description the project.
+> Super Budget App is an application where you can track all the transactions you have done, You must create an account in order to use the app
+
+## Link
+
+[link to the page](https://super-budget-app.fly.dev/)
 
 ## Built With
 
@@ -27,7 +31,7 @@ To get a local copy up and running follow these simple steps:
 - Type these commands into the terminal:
 
 ```
-git clone 
+git clone https://github.com/AxelSoler/super-budget-app.git
 cd super-budget-app
 bundle install
 ```
@@ -73,7 +77,7 @@ rails server
 rspec
 ```
 
-## Authors
+## Author
 
 👤 **Axel Soler**
 
