@@ -4,6 +4,10 @@
 
 > Super Budget App is an application where you can track all the transactions you have done, You must create an account in order to use the app
 
+## Link
+
+[link to the page](https://super-budget-app.fly.dev/)
+
 ## Built With
 
 - Ruby on Rails
